@@ -4,18 +4,43 @@ buildscript {
         minSdkVersion = 23
         compileSdkVersion = 34
         targetSdkVersion = 34
+        appCompatVersion 	= "1.4.1"
         ndkVersion = "26.1.10909125"
-        kotlinVersion = "1.9.24"
+        kotlinVersion = "1.8.0"
+        VisionCamera_enableCodeScanner = true
+        //playServicesLocationVersion = "21.0.1"
+        googlePlayServicesVersion = "21.0.1"
+        
+        //kotlinVersion = "1.9.24"
     }
     repositories {
         google()
         mavenCentral()
+        jcenter() 
     }
     dependencies {
-        classpath("com.android.tools.build:gradle")
+        classpath("com.android.tools.build:gradle:8.6.0")
         classpath("com.facebook.react:react-native-gradle-plugin")
-        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin")
+        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion")
+    }
+   
+}
+
+allprojects {
+    repositories {
+        google()
+        mavenCentral() // Make sure this line is included
+        jcenter()      // Optional, but useful for some older dependencies
+        maven { url 'https://jcenter.bintray.com' }
+        // Required for react-native-background-geolocation
+        maven { url("${project(':react-native-background-geolocation').projectDir}/libs") }
+        maven { url 'https://developer.huawei.com/repo/' }
+        
+
+        // Required for react-native-background-fetch
+        maven { url("${project(':react-native-background-fetch').projectDir}/libs") }
     }
 }
+
 
 apply plugin: "com.facebook.react.rootproject"

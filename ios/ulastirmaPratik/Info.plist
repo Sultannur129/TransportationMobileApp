@@ -2,6 +2,23 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+    <key>UIBackgroundModes</key>
+    <array>
+    <string>fetch</string>
+    <string>location</string>
+    </array>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+    <string>We need your location to provide better services.</string>
+    <key>NSLocationWhenInUseUsageDescription</key>
+    <string>We need your location to provide background updates.</string>
+    <key>NSLocationAlwaysUsageDescription</key>
+    <string>We need your location to provide background updates.</string>
+	<key>NSCameraUsageDescription</key>
+    <string>Kamera erişimi gerekiyor.</string>
+    <key>NSPhotoLibraryUsageDescription</key>
+    <string>Fotoğraflarınıza erişim gerekiyor.</string>
+	<key>NSMicrophoneUsageDescription</key>
+    <string>We need access to your microphone.</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleDisplayName</key>

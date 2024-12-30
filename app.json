@@ -1,4 +1,13 @@
 {
   "name": "ulastirmaPratik",
-  "displayName": "ulastirmaPratik"
+  "displayName": "ulastirmaPratik",
+  "plugins": [
+    [
+      "react-native-vision-camera",
+      {
+       
+        "enableCodeScanner": true
+      }
+    ]
+  ]
 }
